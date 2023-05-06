@@ -1,28 +1,53 @@
 {
-  "name": "react-js-mailer",
+  "name": "react-mailer-form",
   "version": "0.1.0",
   "private": false,
   "author": "Harkesh Kumar<pooniaharkesh196@gmail.com>",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@popperjs/core": "^2.11.7",
+    "axios": "^1.4.0",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
   },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+    "eject": "react-scripts eject"
+  },
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./dist/esm",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "babel": {
@@ -44,6 +69,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
-    "@babel/preset-react": "^7.18.6"
+    "@babel/preset-react": "^7.18.6",
+    "@types/jest": "^29.5.1"
   }
 }
